@@ -56,6 +56,30 @@ class Binding
   def receiver(); end
 end
 
+class Bundler::CurrentRuby
+  def jruby_27?(); end
+
+  def maglev_27?(); end
+
+  def mingw_27?(); end
+
+  def mri_27?(); end
+
+  def mswin64_27?(); end
+
+  def mswin_27?(); end
+
+  def on_27?(); end
+
+  def rbx_27?(); end
+
+  def ruby_27?(); end
+
+  def truffleruby_27?(); end
+
+  def x64_mingw_27?(); end
+end
+
 Bundler::Deprecate = Gem::Deprecate
 
 class Bundler::Env
@@ -71,6 +95,8 @@ end
 
 class Bundler::FeatureFlag
   def github_https?(); end
+
+  def lockfile_upgrade_warning?(); end
 end
 
 class Bundler::Fetcher
@@ -247,6 +273,20 @@ class Bundler::Fetcher
   def self.redirect_limit=(redirect_limit); end
 end
 
+module Bundler::FileUtils
+  VERSION = ::T.let(nil, ::T.untyped)
+end
+
+class Bundler::FileUtils::Entry_
+  def link(dest); end
+end
+
+module Bundler::FileUtils
+  def self.cp_lr(src, dest, noop: T.unsafe(nil), verbose: T.unsafe(nil), dereference_root: T.unsafe(nil), remove_destination: T.unsafe(nil)); end
+
+  def self.link_entry(src, dest, dereference_root=T.unsafe(nil), remove_destination=T.unsafe(nil)); end
+end
+
 class Bundler::GemHelper
   def allowed_push_host(); end
 
@@ -288,7 +328,9 @@ class Bundler::GemHelper
 
   def sh(cmd, &block); end
 
-  def sh_with_code(cmd, &block); end
+  def sh_with_input(cmd); end
+
+  def sh_with_status(cmd, &block); end
 
   def spec_path(); end
 
@@ -629,10 +671,13 @@ class Bundler::Retry
 end
 
 class Bundler::RubyGemsGemInstaller
-  def initialize(gem, options=T.unsafe(nil)); end
 end
 
 class Bundler::RubyGemsGemInstaller
+end
+
+class Bundler::RubygemsIntegration::MoreFuture
+  def default_stubs(); end
 end
 
 class Bundler::Settings::Mirror
@@ -1470,32 +1515,6 @@ class Float
   include ::JSON::Ext::Generator::GeneratorMethods::Float
 end
 
-module Forwardable
-  def def_delegator(accessor, method, ali=T.unsafe(nil)); end
-
-  def def_delegators(accessor, *methods); end
-
-  def def_instance_delegator(accessor, method, ali=T.unsafe(nil)); end
-
-  def def_instance_delegators(accessor, *methods); end
-
-  def delegate(hash); end
-
-  def instance_delegate(hash); end
-end
-
-module Forwardable
-  def self._compile_method(src, file, line); end
-
-  def self._delegator_method(obj, accessor, method, ali); end
-
-  def self._valid_method?(method); end
-
-  def self.debug(); end
-
-  def self.debug=(debug); end
-end
-
 class FrozenError
 end
 
@@ -1942,10 +1961,6 @@ class Numeric
 
   def infinite?(); end
 
-  def negative?(); end
-
-  def positive?(); end
-
 end
 
 class Object
@@ -2364,20 +2379,6 @@ class SignalException
   def signm(); end
 
   def signo(); end
-end
-
-module SingleForwardable
-  def def_delegator(accessor, method, ali=T.unsafe(nil)); end
-
-  def def_delegators(accessor, *methods); end
-
-  def def_single_delegator(accessor, method, ali=T.unsafe(nil)); end
-
-  def def_single_delegators(accessor, *methods); end
-
-  def delegate(hash); end
-
-  def single_delegate(hash); end
 end
 
 class Socket
