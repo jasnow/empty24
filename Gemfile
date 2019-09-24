@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.5.6'
+ruby '2.4.7'
 
 gem 'sorbet', :group => :development
 gem 'sorbet-runtime'

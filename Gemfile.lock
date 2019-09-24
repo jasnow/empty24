@@ -14,7 +14,7 @@ DEPENDENCIES
   sorbet-runtime
 
 RUBY VERSION
-   ruby 2.5.6p201
+   ruby 2.4.7p357
 
 BUNDLED WITH
    1.17.3
