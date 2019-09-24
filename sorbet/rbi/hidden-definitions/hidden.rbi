@@ -27,16 +27,12 @@ end
 BasicObject::BasicObject = BasicObject
 
 class BigDecimal
-  def clone(); end
   EXCEPTION_NaN = ::T.let(nil, ::T.untyped)
   SIGN_NaN = ::T.let(nil, ::T.untyped)
-  VERSION = ::T.let(nil, ::T.untyped)
 end
 
 class Binding
   def clone(); end
-
-  def irb(); end
 end
 
 Bundler::Deprecate = Gem::Deprecate
@@ -560,8 +556,6 @@ class Delegator
 
   def __setobj__(obj); end
 
-  def eql?(obj); end
-
   def initialize(obj); end
 
   def marshal_dump(); end
@@ -599,16 +593,8 @@ module DidYouMean::Correctable
   def to_s(); end
 end
 
-class DidYouMean::DeprecatedIgnoredCallers
-  def +(*_); end
-
-  def <<(*_); end
-end
-
-class DidYouMean::KeyErrorChecker
-  def corrections(); end
-
-  def initialize(key_error); end
+class DidYouMean::Formatter
+  def initialize(corrections=T.unsafe(nil)); end
 end
 
 class DidYouMean::MethodNameChecker
@@ -627,10 +613,6 @@ class DidYouMean::NullChecker
   def corrections(); end
 
   def initialize(*_); end
-end
-
-class DidYouMean::PlainFormatter
-  def message_for(corrections); end
 end
 
 class DidYouMean::SpellChecker
@@ -653,7 +635,6 @@ class DidYouMean::VariableNameChecker
   def method_names(); end
 
   def name(); end
-  RB_PREDEFINED_OBJECTS = ::T.let(nil, ::T.untyped)
 end
 
 class Encoding
@@ -874,10 +855,6 @@ class Etc::Passwd
   def uid=(_); end
 end
 
-class Exception
-  def full_message(*_); end
-end
-
 class ExitCalledError
 end
 
@@ -902,15 +879,15 @@ module FileUtils
 end
 
 module FileUtils::DryRun
-  include ::FileUtils::LowMethods
   include ::FileUtils
   include ::FileUtils::StreamUtils_
+  include ::FileUtils::LowMethods
 end
 
 module FileUtils::NoWrite
-  include ::FileUtils::LowMethods
   include ::FileUtils
   include ::FileUtils::StreamUtils_
+  include ::FileUtils::LowMethods
 end
 
 module FileUtils::Verbose
@@ -934,9 +911,6 @@ module Forwardable
   def delegate(hash); end
 
   def instance_delegate(hash); end
-end
-
-class FrozenError
 end
 
 module GC
@@ -1015,15 +989,9 @@ class Hash
 
   def replace(_); end
 
-  def slice(*_); end
-
   def to_h(); end
 
   def to_proc(); end
-
-  def transform_keys(); end
-
-  def transform_keys!(); end
 
   def transform_values(); end
 
@@ -1045,10 +1013,6 @@ class IO
 
   def pathconf(_); end
 
-  def pread(*_); end
-
-  def pwrite(_, _1); end
-
   def ready?(); end
 
   def wait(*_); end
@@ -1064,106 +1028,9 @@ IO::EWOULDBLOCKWaitReadable = IO::EAGAINWaitReadable
 
 IO::EWOULDBLOCKWaitWritable = IO::EAGAINWaitWritable
 
-class IPAddr
-  include ::Comparable
-  def &(other); end
-
-  def <<(num); end
-
-  def ==(other); end
-
-  def ===(other); end
-
-  def >>(num); end
-
-  def eql?(other); end
-
-  def family(); end
-
-  def hton(); end
-
-  def include?(other); end
-
-  def initialize(addr=T.unsafe(nil), family=T.unsafe(nil)); end
-
-  def ip6_arpa(); end
-
-  def ip6_int(); end
-
-  def ipv4?(); end
-
-  def ipv4_compat(); end
-
-  def ipv4_compat?(); end
-
-  def ipv4_mapped(); end
-
-  def ipv4_mapped?(); end
-
-  def ipv6?(); end
-
-  def link_local?(); end
-
-  def loopback?(); end
-
-  def mask(prefixlen); end
-
-  def mask!(mask); end
-
-  def native(); end
-
-  def prefix(); end
-
-  def prefix=(prefix); end
-
-  def private?(); end
-
-  def reverse(); end
-
-  def set(addr, *family); end
-
-  def succ(); end
-
-  def to_i(); end
-
-  def to_range(); end
-
-  def to_string(); end
-
-  def |(other); end
-
-  def ~(); end
-  IN4MASK = ::T.let(nil, ::T.untyped)
-  IN6FORMAT = ::T.let(nil, ::T.untyped)
-  IN6MASK = ::T.let(nil, ::T.untyped)
-  RE_IPV4ADDRLIKE = ::T.let(nil, ::T.untyped)
-  RE_IPV6ADDRLIKE_COMPRESSED = ::T.let(nil, ::T.untyped)
-  RE_IPV6ADDRLIKE_FULL = ::T.let(nil, ::T.untyped)
-end
-
-class IPAddr::AddressFamilyError
-end
-
-class IPAddr::Error
-end
-
-class IPAddr::InvalidAddressError
-end
-
-class IPAddr::InvalidPrefixError
-end
-
 class Integer
   include ::JSON::Ext::Generator::GeneratorMethods::Integer
-  def allbits?(_); end
-
-  def anybits?(_); end
-
   def digits(*_); end
-
-  def nobits?(_); end
-
-  def pow(*_); end
 
   def to_bn(); end
   GMP_VERSION = ::T.let(nil, ::T.untyped)
@@ -1186,18 +1053,7 @@ module Kernel
 
   def object_id(); end
 
-  def pp(*objs); end
-
   def respond_to?(*_); end
-
-  def yield_self(); end
-end
-
-class KeyError
-  include ::DidYouMean::Correctable
-  def key(); end
-
-  def receiver(); end
 end
 
 class LoadError
@@ -1214,8 +1070,6 @@ Methods = T::Private::Methods
 
 class Module
   def deprecate_constant(*_); end
-
-  def undef_method(*_); end
 end
 
 class Monitor
@@ -1233,10 +1087,6 @@ module MonitorMixin
 
   def mon_exit(); end
 
-  def mon_locked?(); end
-
-  def mon_owned?(); end
-
   def mon_synchronize(); end
 
   def mon_try_enter(); end
@@ -1246,8 +1096,6 @@ module MonitorMixin
   def synchronize(); end
 
   def try_mon_enter(); end
-  EXCEPTION_IMMEDIATE = ::T.let(nil, ::T.untyped)
-  EXCEPTION_NEVER = ::T.let(nil, ::T.untyped)
 end
 
 class MonitorMixin::ConditionVariable
@@ -1277,7 +1125,6 @@ class NilClass
 end
 
 class NoMethodError
-  include ::DidYouMean::Correctable
   def args(); end
 
   def private_call?(); end
@@ -1333,8 +1180,6 @@ class Pathname
 
   def fnmatch?(*_); end
 
-  def glob(*_); end
-
   def make_symlink(_); end
 end
 
@@ -1370,11 +1215,6 @@ class Process::Tms
   def utime=(_); end
 end
 
-module Random::Formatter
-  def alphanumeric(n=T.unsafe(nil)); end
-  ALPHANUMERIC = ::T.let(nil, ::T.untyped)
-end
-
 class Regexp
   def match?(*_); end
 end
@@ -1388,8 +1228,6 @@ class RubyVM::InstructionSequence
 
   def disassemble(); end
 
-  def each_child(); end
-
   def eval(); end
 
   def first_lineno(); end
@@ -1401,14 +1239,10 @@ class RubyVM::InstructionSequence
   def to_a(); end
 
   def to_binary(*_); end
-
-  def trace_points(); end
 end
 
 class Set
   def ==(other); end
-
-  def ===(o); end
 
   def compare_by_identity(); end
 
@@ -1423,8 +1257,6 @@ class Set
   def pretty_print(pp); end
 
   def pretty_print_cycle(pp); end
-
-  def reset(); end
   InspectKey = ::T.let(nil, ::T.untyped)
 end
 
@@ -1673,13 +1505,9 @@ class String
 
   def casecmp?(_); end
 
-  def each_grapheme_cluster(); end
-
   def encode(*_); end
 
   def encode!(*_); end
-
-  def grapheme_clusters(); end
 
   def reverse!(); end
 
@@ -1689,13 +1517,11 @@ class String
 
   def succ!(); end
 
-  def undump(); end
+  def unicode_normalize(form=T.unsafe(nil)); end
 
-  def unicode_normalize(*_); end
+  def unicode_normalize!(form=T.unsafe(nil)); end
 
-  def unicode_normalize!(*_); end
-
-  def unicode_normalized?(*_); end
+  def unicode_normalized?(form=T.unsafe(nil)); end
 
   def unpack1(_); end
 end
@@ -1883,9 +1709,6 @@ class UncaughtThrowError
   def tag(); end
 
   def value(); end
-end
-
-module UnicodeNormalize
 end
 
 module Warning

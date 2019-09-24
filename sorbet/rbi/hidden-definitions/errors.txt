@@ -132,8 +132,6 @@
 # wrong constant name to_h
 # uninitialized constant Benchmark
 # wrong constant name clone
-# wrong constant name clone
-# wrong constant name irb
 # wrong constant name github_https?
 # wrong constant name <Class:Base>
 # wrong constant name <Class:CompactIndex>
@@ -368,7 +366,6 @@
 # wrong constant name ==
 # wrong constant name __getobj__
 # wrong constant name __setobj__
-# wrong constant name eql?
 # wrong constant name initialize
 # wrong constant name marshal_dump
 # wrong constant name marshal_load
@@ -385,11 +382,6 @@
 # wrong constant name original_message
 # wrong constant name spell_checker
 # wrong constant name to_s
-# wrong constant name +
-# wrong constant name <<
-# uninitialized constant DidYouMean::DeprecatedIgnoredCallers::Elem
-# uninitialized constant DidYouMean::Formatter
-# wrong constant name corrections
 # wrong constant name initialize
 # wrong constant name corrections
 # wrong constant name initialize
@@ -398,7 +390,6 @@
 # wrong constant name receiver
 # wrong constant name corrections
 # wrong constant name initialize
-# wrong constant name message_for
 # wrong constant name correct
 # wrong constant name initialize
 # wrong constant name corrections
@@ -480,19 +471,9 @@
 # wrong constant name uclass=
 # wrong constant name uid
 # wrong constant name uid=
-# wrong constant name full_message
 # uninitialized constant Exception2MessageMapper
 # wrong constant name resume
 # wrong constant name size?
-# uninitialized constant FileUtils::DryRun::VERSION
-# Did you mean?  FileUtils::DryRun::VERSION
-#                FileUtils::VERSION
-# uninitialized constant FileUtils::NoWrite::VERSION
-# Did you mean?  FileUtils::NoWrite::VERSION
-#                FileUtils::VERSION
-# uninitialized constant FileUtils::Verbose::VERSION
-# Did you mean?  FileUtils::Verbose::VERSION
-#                FileUtils::VERSION
 # wrong constant name def_delegator
 # wrong constant name def_delegators
 # wrong constant name def_instance_delegator
@@ -533,11 +514,8 @@
 # wrong constant name index
 # wrong constant name merge!
 # wrong constant name replace
-# wrong constant name slice
 # wrong constant name to_h
 # wrong constant name to_proc
-# wrong constant name transform_keys
-# wrong constant name transform_keys!
 # wrong constant name transform_values
 # wrong constant name transform_values!
 # wrong constant name update
@@ -547,86 +525,30 @@
 # wrong constant name nonblock?
 # wrong constant name nread
 # wrong constant name pathconf
-# wrong constant name pread
-# wrong constant name pwrite
 # wrong constant name ready?
 # wrong constant name wait
 # wrong constant name wait_readable
 # wrong constant name wait_writable
 # wrong constant name write_nonblock
-# wrong constant name &
-# wrong constant name <<
-# wrong constant name <=>
-# wrong constant name ==
-# wrong constant name ===
-# wrong constant name >>
-# wrong constant name <Class:AddressFamilyError>
-# wrong constant name <Class:Error>
-# wrong constant name <Class:InvalidAddressError>
-# wrong constant name <Class:InvalidPrefixError>
-# wrong constant name eql?
-# wrong constant name family
-# wrong constant name hton
-# wrong constant name include?
-# wrong constant name initialize
-# wrong constant name ip6_arpa
-# wrong constant name ip6_int
-# wrong constant name ipv4?
-# wrong constant name ipv4_compat
-# wrong constant name ipv4_compat?
-# wrong constant name ipv4_mapped
-# wrong constant name ipv4_mapped?
-# wrong constant name ipv6?
-# wrong constant name link_local?
-# wrong constant name loopback?
-# wrong constant name mask
-# wrong constant name mask!
-# wrong constant name native
-# wrong constant name prefix
-# wrong constant name prefix=
-# wrong constant name private?
-# wrong constant name reverse
-# wrong constant name set
-# wrong constant name succ
-# wrong constant name to_i
-# wrong constant name to_range
-# wrong constant name to_string
-# wrong constant name |
-# wrong constant name ~
-# wrong constant name allbits?
-# wrong constant name anybits?
 # wrong constant name digits
-# wrong constant name nobits?
-# wrong constant name pow
 # wrong constant name to_bn
 # wrong constant name initialize
 # wrong constant name gem
 # wrong constant name itself
 # wrong constant name object_id
-# wrong constant name pp
 # wrong constant name respond_to?
-# wrong constant name yield_self
-# wrong constant name key
-# wrong constant name receiver
 # wrong constant name path
 # wrong constant name exit_value
 # wrong constant name reason
 # uninitialized constant Logger
 # uninitialized constant MessagePack
 # wrong constant name deprecate_constant
-# wrong constant name undef_method
-# uninitialized constant Monitor::EXCEPTION_IMMEDIATE
-# Did you mean?  Monitor::EXCEPTION_IMMEDIATE
-# uninitialized constant Monitor::EXCEPTION_NEVER
-# Did you mean?  Monitor::EXCEPTION_NEVER
 # wrong constant name enter
 # wrong constant name exit
 # wrong constant name try_enter
 # wrong constant name initialize
 # wrong constant name mon_enter
 # wrong constant name mon_exit
-# wrong constant name mon_locked?
-# wrong constant name mon_owned?
 # wrong constant name mon_synchronize
 # wrong constant name mon_try_enter
 # wrong constant name new_cond
@@ -689,12 +611,10 @@
 # uninitialized constant OpenSSL::Digest::DSS1
 # uninitialized constant OpenSSL::Digest::SHA
 # Did you mean?  OpenSSL::Digest::SHA1
-# uninitialized constant OpenSSL::PKCS5::PKCS5Error
 # uninitialized constant Opus
 # uninitialized constant PP
 # wrong constant name empty?
 # wrong constant name fnmatch?
-# wrong constant name glob
 # wrong constant name make_symlink
 # uninitialized constant PrettyPrint
 # wrong constant name ===
@@ -731,23 +651,19 @@
 # wrong constant name utime
 # wrong constant name utime=
 # uninitialized constant Racc
-# wrong constant name alphanumeric
 # wrong constant name match?
 # uninitialized constant Ripper
 # wrong constant name absolute_path
 # wrong constant name base_label
 # wrong constant name disasm
 # wrong constant name disassemble
-# wrong constant name each_child
 # wrong constant name eval
 # wrong constant name first_lineno
 # wrong constant name label
 # wrong constant name path
 # wrong constant name to_a
 # wrong constant name to_binary
-# wrong constant name trace_points
 # wrong constant name ==
-# wrong constant name ===
 # wrong constant name compare_by_identity
 # wrong constant name compare_by_identity?
 # wrong constant name divide
@@ -755,7 +671,6 @@
 # wrong constant name flatten_merge
 # wrong constant name pretty_print
 # wrong constant name pretty_print_cycle
-# wrong constant name reset
 # wrong constant name signm
 # wrong constant name signo
 # wrong constant name def_delegator
@@ -837,15 +752,12 @@
 # wrong constant name -@
 # wrong constant name []=
 # wrong constant name casecmp?
-# wrong constant name each_grapheme_cluster
 # wrong constant name encode
 # wrong constant name encode!
-# wrong constant name grapheme_clusters
 # wrong constant name reverse!
 # wrong constant name shellescape
 # wrong constant name shellsplit
 # wrong constant name succ!
-# wrong constant name undump
 # wrong constant name unicode_normalize
 # wrong constant name unicode_normalize!
 # wrong constant name unicode_normalized?
