@@ -1366,9 +1366,9 @@ end
 class Gem::S3URISigner
 end
 
-class Gem::Specification
-  extend ::Enumerable
-end
+#class Gem::Specification
+#  extend ::Enumerable
+#end
 
 module Gem::Util
   def self.correct_for_windows_path(path); end
