@@ -1367,7 +1367,7 @@ class Gem::S3URISigner
 end
 
 class Gem::Specification
- extend ::Enumerable
+  extend ::Enumerable
 end
 
 module Gem::Util
